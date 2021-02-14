@@ -24,7 +24,7 @@ public class Board {
         this.boardArray = new Spot[BOARD_SIZE][BOARD_SIZE];
         for(int row = 0; row<Board.BOARD_SIZE; row++) {
             for (int column = 0; column < Board.BOARD_SIZE; column++) {
-                Spot spot = new Spot();
+                Spot spot = new Spot(row, column);
                 if (row==1){
                     Pawn pawn = new Pawn(Color.WHITE, spot);
                     spot.setPiece(pawn);
@@ -57,10 +57,14 @@ public class Board {
                         boardArray[row][column] = spot;
                     }
                 } else {
-                    boardArray[row][column] = new Spot();
+                    boardArray[row][column] = new Spot(row, column);
                 }
             }
         }
+    }
+
+    public Spot getSpot(int row, int column){
+        return boardArray[row][column];
     }
 
     private String getFormattedPiece(Optional<Piece> maybePiece){
