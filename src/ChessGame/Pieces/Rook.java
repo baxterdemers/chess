@@ -8,7 +8,7 @@ import java.util.List;
 public class Rook extends Piece{
 
     public Rook(Color color, Spot spot) {
-        super(color, spot, 5, 'R');
+        super(color, spot, 5, 'R', name);
     }
 
     @Override

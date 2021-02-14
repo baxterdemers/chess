@@ -11,7 +11,7 @@ public class Pawn extends Piece{
     private boolean hasMoved;
 
     public Pawn(Color color, Spot spot) {
-        super(color, spot, 1, 'P');
+        super(color, spot, 1, 'P', name);
         hasMoved = false;
     }
 

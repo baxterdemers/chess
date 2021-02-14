@@ -12,6 +12,8 @@ public abstract class Piece{
     private final int value;
     private final char formattedPiece;
 
+
+
     public Piece(Color color, Spot spot, int value, char formattedPiece){
         this.color = color;
         this.spot = spot;
@@ -35,4 +37,13 @@ public abstract class Piece{
 
     public abstract List<Spot> getValidMoves();
 
+    @Override
+    public String toString() {
+        return "Piece{" +
+                color +
+                spot +
+                ", value=" + value +
+                formattedPiece +
+                '}';
+    }
 }

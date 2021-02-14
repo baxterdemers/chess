@@ -29,4 +29,15 @@ public class Spot {
     public void setPiece(Piece piece){
         maybePiece = Optional.of(piece);
     }
+
+    public String getChessNotation(){
+        return getCharForNumber() + (row + 1);
+    }
+    public String getCharForNumber() {
+        int i = column + 1;
+        return i > 0 && i < 9 ? String.valueOf((char)(i + 64)) : null;
+    }
+    public String toString(){
+        return "Spot: " + getChessNotation();
+    }
 }

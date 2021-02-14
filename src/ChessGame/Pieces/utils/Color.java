@@ -21,4 +21,11 @@ public enum Color {
     public String getAnsiColor(){
         return this.ansiColor;
     }
+
+    @Override
+    public String toString() {
+        return "Color{" +
+                "value='" + value + '\'' +
+                '}';
+    }
 }

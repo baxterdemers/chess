@@ -63,6 +63,35 @@ public class Board {
         }
     }
 
+    public Spot getSpotChessNotation(int row, char column){
+        row = row - 1;
+        if (column == 'a'){
+            return getSpot(row, 0);
+        }
+        if (column == 'b'){
+            return getSpot(row, 1);
+        }
+        if (column == 'c'){
+            return getSpot(row, 2);
+        }
+        if (column == 'd'){
+            return getSpot(row, 3);
+        }
+        if (column == 'e'){
+            return getSpot(row, 4);
+        }
+        if (column == 'f'){
+            return getSpot(row, 5);
+        }
+        if (column == 'g'){
+            return getSpot(row, 6);
+        }
+        if (column == 'h'){
+            return getSpot(row, 7);
+        }
+        throw new RuntimeException("no valid column found");
+    }
+
     public Spot getSpot(int row, int column){
         return boardArray[row][column];
     }

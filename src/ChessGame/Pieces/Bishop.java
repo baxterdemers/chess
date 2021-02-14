@@ -8,7 +8,7 @@ import java.util.List;
 public class Bishop extends Piece{
 
     public Bishop(Color color, Spot spot) {
-        super(color, spot, 3, 'B');
+        super(color, spot, 3, 'B', name);
     }
 
     @Override

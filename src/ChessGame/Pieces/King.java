@@ -8,7 +8,7 @@ import java.util.List;
 public class King extends Piece {
 
     public King(Color color, Spot spot){
-        super(color,spot, Integer.MAX_VALUE, 'K');
+        super(color,spot, Integer.MAX_VALUE, 'K', name);
     }
 
     @Override

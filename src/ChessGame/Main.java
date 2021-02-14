@@ -10,5 +10,7 @@ public class Main {
         System.out.println("Initializing new game...");
         Game game = new Game();
         game.board.showBoard();
+        Spot spot = game.board.getSpotChessNotation(2, 'b');
+        System.out.println(spot.getMaybePiece().get());
     }
 }
